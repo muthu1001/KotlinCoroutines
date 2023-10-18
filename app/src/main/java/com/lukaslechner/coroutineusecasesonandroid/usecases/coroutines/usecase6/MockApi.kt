@@ -11,7 +11,19 @@ fun mockApi() = createMockApi(
             "http://localhost/recent-android-versions",
             { "something went wrong on server side" },
             500,
-            1000,
+            200,
+            persist = false
+        ).mock(
+            "http://localhost/recent-android-versions",
+            { "something went wrong on server side" },
+            500,
+            300,
+            persist = false
+        ).mock(
+            "http://localhost/recent-android-versions",
+            { "something went wrong on server side" },
+            500,
+            500,
             persist = false
         ).mock(
             "http://localhost/recent-android-versions",
